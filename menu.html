@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierogarnia Łapanów</title>
+    <meta name="description" content="Pierogarnia Łapanów, która robi niesamowite pierogi i inne dania w super cenach. Pierogi krokiety uszka galaretki i wiele wiele innych Wpadaj!">
+    <meta name='keywords' content='Pierogarnia, pierogi, krokiety, Łapanów, parafia Łapanów, gmina Łapanów, uszka, jedzenie, tanio, pysznie, galaretki, knedle, smalczyk, kopytka, naleśniki, pyzy, gołąbki, głodny, ruskie, impreza'>
+    <meta name='robots' content='index,follow'>
+    <link rel="icon" href="LOGOq1.png">
+    <meta name="google-site-verification" content="mdLPcXcdo9UzCtfHSn-P4JS5xywFet1tB4P_cJK_NJI" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Saira&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=Open+Sans:wght@300&family=Saira&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Najlepsza pierogarnia w Małopolsce" />
+    <style>
+      * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "cuprum", "Open Sans", Arial, sans-serif;
+}
+
+.wrap {
+    position: relative;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    overflow: hidden;
+    content: "";
+    clear: both;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(tłoMenu.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bars{
+    color: white;
+    position: fixed;
+    z-index: 1;
+    right: 2%;
+    top: 1.5%;
+}
+.exit{
+    font-size: 35px;
+    position: fixed;
+    z-index: 3;
+    right: 1.5%;
+    top: 0.2%;
+    opacity: 0;
+    -webkit-transition: 0.6s linear;
+    -o-transition: 0.6s linear;
+    transition: 0.6s linear;
+
+}
+
+.mobilemenu{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 45%;
+    background-color: rgb(187, 65, 56);
+    z-index: 2;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 0.6s linear;
+    -o-transition: 0.6s linear;
+    transition: 0.6s linear;
+}
+
+.mobilemenu a:nth-child(1) {
+    margin-top: 25%;
+}
+
+.mobilemenu a{
+    padding: 20px 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar {
+    position: relative;
+    width: 80%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 20vh;
+    top: 5%;
+    left: 50%;
+}
+
+.navigation {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 50%;
+    top: 0%;
+    -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+}
+
+.navbar img {
+    position: absolute;
+    height: 12vw;
+    width: 20vw;
+    left: -8%;
+    top: 30%;
+    margin: 0 50px;
+}
+
+
+.navigation a {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    color: white
+
+}
+
+.navigation a:first-child {
+    color: rgb(187, 65, 56)
+}
+
+.navigation a:hover {
+    color: rgb(187, 65, 56)
+}
+
+.topbar {
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid grey;
+}
+
+
+.topbar a {
+    position: absolute;
+    font-size: 3vh;
+    border-left: 1px solid grey;
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    line-height: 6vh;
+    border-right: 1px solid grey;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.topbar a+a {
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+}
+
+.topbar a:hover {
+    color: rgb(24, 119, 242);
+}
+
+.topbar a+a:hover {
+    color: #d6249f;
+}
+
+.article {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    bottom: -20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.article span {
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.about{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+}
+
+.about h2 {
+    font-family: 'Marck Script', cursive;
+    color: rgb(187, 65, 56);
+    font-size: 40px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.about h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clickmenu div{
+    text-align: center;
+    margin-top: 30px;
+    
+}
+
+.clickmenu div a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    color: black;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    line-height: 50px;
+    cursor: pointer;
+    
+}
+
+.clickmenu div a:hover{
+    color: #ECAA00
+}
+.listmenu0{
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateX(12.5%);
+        -ms-transform: translateX(12.5%);
+            transform: translateX(12.5%);
+    margin-bottom: 100px;
+}
+.listmenu0 div{
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 10px 10px 8px 10px #888888;
+            box-shadow: 10px 10px 8px 10px #888888;
+    border-radius: 5px;
+    
+}
+
+.listmenu0 img{
+    float: left;
+    height: 15vh;
+    width: 15vh;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.listmenu0 span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
+}
+
+.listmenu0 p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+.listmenu1{
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateX(12.5%);
+        -ms-transform: translateX(12.5%);
+            transform: translateX(12.5%);
+    margin-bottom: 100px;
+}
+.listmenu1 div{
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 10px 10px 8px 10px #888888;
+            box-shadow: 10px 10px 8px 10px #888888;
+    border-radius: 5px;
+    
+}
+
+.listmenu1 img{
+    float: left;
+    height: 15vh;
+    width: 15vh;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.listmenu1 span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
+}
+
+.listmenu1 p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+.listmenu2{
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateX(12.5%);
+        -ms-transform: translateX(12.5%);
+            transform: translateX(12.5%);
+    margin-bottom: 100px;
+}
+.listmenu2 div{
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 10px 10px 8px 10px #888888;
+            box-shadow: 10px 10px 8px 10px #888888;
+    border-radius: 5px;
+    
+}
+
+.listmenu2 img{
+    float: left;
+    height: 15vh;
+    width: 15vh;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.listmenu2 span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
+}
+
+.listmenu2 p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+
+
+
+
+footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color:  rgb(43, 4, 0);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    
+    
+    
+}
+footer img{
+    height: 15vh;
+    width: 25vh;
+}
+
+footer div{
+    width: 33,3%;
+    margin: 40px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    text-align: center;
+}
+
+footer p{
+    font-family: "open Sans", sans-serif;
+    color: rgb(155, 165, 164);
+    font-size: 16px;
+    text-align: center;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+footer .info a{
+    color: rgb(187, 65, 56);
+    font-size: 25px;
+}
+
+footer .fb a{
+    color: white;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.fb a:hover {
+    color: rgb(24, 119, 242);
+}
+
+.fb a+a:hover {
+    color: #d6249f;
+}
+
+@media (min-width: 1025px){
+    .bars{
+        display: none;
+        opacity: 0;
+    }
+    .exit{
+        opacity: 0;
+        display: none;
+    }
+    
+    .mobilemenu{
+        display: none;
+    }
+    
+    .mobilemenu a:nth-child(1) {
+        display: none;
+    }
+    .mobilemenu a{
+        display: none;
+    }
+
+}
+
+@media (max-width: 1240px){
+    .navbar img {
+        left: -10%;
+        top: 40%;
+    }
+} 
+
+ @media (max-width: 1100px){
+    .navbar img {
+        height: 13vw;
+        width: 21vw;
+        left: -12%;
+        top: 50%;
+    }
+} 
+
+@media (max-width: 1024px) and (orientation: portrait){
+    .navigation {
+        display: none;
+    }
+
+    .navbar img {
+        height: 20vw;
+        width: 30vw;
+        left: -12%;
+        top: 40%;
+    }
+} 
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .navigation {
+        display: none;
+    }
+}
+
+@media (max-width: 1366px) and (orientation: landscape){
+    /* .navigation {
+        display: none;
+    } */
+
+} 
+
+@media (max-width: 540px) and (orientation: portrait){
+    .article span {
+        font-size: 50px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+    
+    h3{
+        display: inline-block;
+        font-size: 25px;
+        width: 20vh;
+    }
+    span{
+        font-size: 25px;
+    }
+    
+
+} 
+
+@media (max-width: 720px) and (orientation: landscape){
+    .article span {
+        font-size: 50px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    .navbar img {
+        height: 16vw;
+        width: 26vw;
+        left: -12%;
+        top: 40%;
+    }
+
+    
+    h3{
+        display: inline-block;
+        font-size: 25px;
+        width: 40vh;
+    }
+    span{
+        font-size: 25px;
+    }
+
+    .listmenu0{
+        margin-top: 100px;
+        height: 145vh;
+    }
+
+    .listmenu1{
+        margin-top: 100px;
+        
+    }
+
+    .listmenu2{
+        margin-top: 100px;
+        height: 160vh;
+        
+    }
+
+
+} 
+
+@media (max-width: 375px) and (orientation: portrait){
+    .article span {
+        font-size: 40px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+    .navbar img {
+        height: 28vw;
+        width: 40vw;
+        left: -20%;
+        top: 40%;
+    }
+
+    .article span {
+        font-size: 50px;
+    }
+    
+    h3{
+        display: inline-block;
+        font-size: 25px;
+        width: 11vh;
+    }
+    span{
+        font-size: 20px;
+    }
+
+    .listmenu0 img{
+        width: 13vh;
+        height: 13vh;
+    }
+
+    .listmenu1 img{
+        width: 13vh;
+        height: 13vh;
+    }
+
+    .listmenu2 img{
+        width: 13vh;
+        height: 13vh;
+    }
+
+    .clickmenu a{
+        font-size: 25px;
+    }
+    
+
+}
+
+    @media (max-width: 812px) and (orientation: landscape){
+    header{
+        height: 100vh;
+    }
+    
+    h1{
+        font-size: 30px;
+    }
+
+    .navbar img {
+        height: 16vw;
+        width: 26vw;
+        left: -14%;
+        top: 40%;
+    }
+
+    .topbar a{
+        font-size: 15px;
+    }
+
+   
+    .article span{
+        font-size: 45px;
+    }
+
+    .logo img{
+        height: 30vh;
+        width: 44vh;
+    }
+    .listmenu0{
+        margin-top: 130px;
+        height: 200vh;
+    }
+
+    .listmenu1{
+        margin-top: 130px;
+        
+    }
+
+    .listmenu2{
+        margin-top: 130px;
+        height: 230vh;
+        
+    }
+
+    h3{
+        font-size: 25px;
+    }
+
+    span{
+        font-size: 25px;
+    }
+
+    .listmenu0 img{
+        width: 22vh;
+        height: 22vh;
+    }
+
+    .listmenu1 img{
+        width: 22vh;
+        height: 22vh;
+    }
+
+    .listmenu2 img{
+        width: 22vh;
+        height: 22vh;
+    }
+}  
+
+@media (max-width: 414px) and (orientation: portrait){
+
+    .navbar img {
+        height: 24vw;
+        width: 36vw;
+        left: -18%;
+        top: 40%;
+    }
+   
+    .icon div{
+        flex-basis: 100%;
+    }
+
+    .contact{
+        height: 140vh;
+    }
+
+    .about h2{
+        font-size: 25px;
+    }
+
+    h3{
+        font-size: 23px;
+        width: 12vh;
+    }
+    span{
+        font-size: 23px;
+    }
+    .clickmenu a{
+        font-size: 25px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    .icon i{
+        font-size: 35px;
+    }
+    .icon p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 375px) and (orientation: portrait){
+    h3{
+        font-size: 21px;
+        width: 14vh;
+    }
+
+    span{
+        font-size: 21px;
+    }
+    
+    .mobilemenu a{
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 667px) and (orientation: landscape){
+    .icon h2{
+        font-size: 20px;
+    }
+
+    .icon h1{
+        font-size: 25px;
+    }
+    .icon i{
+        font-size: 30px;
+    }
+    .icon p{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 23px;
+        width: 40vh;
+    }
+   
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div>
+                <i class="fas fa-bars bars"></i>
+            <i class="fas fa-times exit"></i>
+            <div class="mobilemenu">
+                <a class="start" href="index.html">Start</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+            <div class="topbar">
+               <a href="https://www.facebook.com/Pierogi.Lapanowskie"> <i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="navbar">
+                <img src= "LOGOq1.png" alt="logo">
+            <div class="navigation">
+                <a class="start" href="index.html">Start</a>
+                <a href="#">Menu</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+
+        <div class="article">
+            <span>Menu</span>
+        </div>
+
+        </header>
+
+        <div class="about">
+            <h2>Dowiedź się więcej</h2>
+        <h1>O naszym jedzeniu</h1>
+        <div class="clickmenu">
+            <div>
+            <a class="pierogi">Pierogi</a>
+            <a class="krokiety">Krokiety</a>
+            <a class="inne">inne</a>
+        </div>
+
+
+
+        </div>
+        </div>
+     <div class="listmenu0">
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi z Mięsem</h3><span>25 PLN/1kg</span><p</p></div>
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi pieczarka + ser</h3><span>22 PLN/1kg</span><p</p></div>
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi z kapustą i grzybami</h3><span>22 PLN/1kg</span><p</p></div>
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi z serem</h3><span>21 PLN/1kg</span><p</p></div>
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi z owocami</h3><span>22 PLN/1kg</span><p</p></div>
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi ze szpinakiem</h3><span>21 PLN/1kg</span><p</p></div>
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi z żółta śliwką</h3><span>20 PLN/1kg</span><p</p></div>
+            <div><img src="brak_zdj.png" alt="#"><h3>Pierogi Ruskie</h3><span>19 PLN/1kg</span><p</p></div>
+    </div> 
+     <div class="listmenu1">
+        <div><img src="brak_zdj.png" alt="#"><h3>Krokiety z Mięsem</h3><span>23 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Krokiety pieczarka + kapusta</h3><span>22 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Krokiety ze szpinakiem</h3><span>22 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Krokiety pieczarka + ser</h3><span>22 PLN/1kg</span><p</p></div>
+        </div>
+
+    <div class="listmenu2">
+        <div><img src="brak_zdj.png" alt="#"><h3>Gołąbki</h3><span>23 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Kluska śląska</h3><span>14 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Kopytka</h3><span>14 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Kluski Leniwe</h3><span>16 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Naleśniki</h3><span>20 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Pyzy z Mięsem</h3><span>20 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Galaretka Mała</h3><span>2 PLN/szt</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Galaretka Duża</h3><span>4 PLN/szt</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Smalczyk Mały</h3><span>2 PLN/szt</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Smalczyk Duży</h3><span>4 PLN/szt</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Knedle ze Śliwką</h3><span>20 PLN/1kg</span><p</p></div>
+        <div><img src="brak_zdj.png" alt="#"><h3>Uszka</h3><span>26 PLN/1kg</span><p></p></div>
+    </div>  
+
+        <footer>
+            <div class="logo">
+                <img src="LOGOq1.png" alt="logo">
+            </div>
+            <div class="info">
+                <p>Kobylec 189,
+                    32-740 Łapanów
+                </p>
+                <p>
+                    Telefon: 537 125 066
+                </p>
+                <a href="https://www.google.com/maps/place/Pierogi+Lapanowskie+-+Kobylec+189/@49.868796,20.296611,16z/data=!4m5!3m4!1s0x0:0xf0c82461d260dfa8!8m2!3d49.8687958!4d20.2966113?hl=pl">Mapa dojazdu</a>
+            </div>
+            <div class="fb">
+                <p>Obserwuj nas na:</p>
+                <a href="https://www.facebook.com/Pierogi.Lapanowskie"> <i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+      
+
+        </footer>
+        <script src="jquery-3.2.1.min.js"></script>
+        <script src="menu.js"></script>
+        </body>
+        </html>

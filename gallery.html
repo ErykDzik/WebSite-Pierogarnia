@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierogarnia Łapanów</title>
+    <meta name="description" content="Pierogarnia Łapanów, która robi niesamowite pierogi i inne dania w super cenach. Pierogi krokiety uszka galaretki i wiele wiele innych Wpadaj!">
+    <meta name='keywords' content='Pierogarnia, pierogi, krokiety, Łapanów, parafia Łapanów, gmina Łapanów, uszka, jedzenie, tanio, pysznie, galaretki, knedle, smalczyk, kopytka, naleśniki, pyzy, gołąbki, głodny, ruskie, impreza'>
+    <meta name='robots' content='index,follow'>
+    <link href="dist/css/lightbox.min.css" rel="stylesheet">
+    <link rel="icon" href="LOGOq1.png">
+    <meta name="google-site-verification" content="mdLPcXcdo9UzCtfHSn-P4JS5xywFet1tB4P_cJK_NJI" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Saira&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=Open+Sans:wght@300&family=Saira&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Najlepsza pierogarnia w Małopolsce" />
+    <style>
+     * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "cuprum", "Open Sans", Arial, sans-serif;
+}
+
+
+.wrap {
+    position: relative;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    overflow: hidden;
+    content: "";
+    clear: both;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(zdj_gallery.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bars{
+    color: white;
+    position: fixed;
+    z-index: 1;
+    right: 2%;
+    top: 1.5%;
+}
+.exit{
+    font-size: 35px;
+    position: fixed;
+    z-index: 3;
+    right: 1.5%;
+    top: 0.2%;
+    opacity: 0;
+    -webkit-transition: 0.6s linear;
+    -o-transition: 0.6s linear;
+    transition: 0.6s linear;
+
+}
+
+.mobilemenu{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 45%;
+    background-color: rgb(187, 65, 56);
+    z-index: 2;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 0.6s linear;
+    -o-transition: 0.6s linear;
+    transition: 0.6s linear;
+}
+
+.mobilemenu a:nth-child(1) {
+    margin-top: 25%;
+}
+
+.mobilemenu a{
+    padding: 20px 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar {
+    position: relative;
+    width: 80%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 20vh;
+    top: 5%;
+    left: 50%;
+}
+
+.navigation {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 50%;
+    top: 0%;
+    -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+}
+
+.navbar img {
+    position: absolute;
+    height: 12vw;
+    width: 20vw;
+    left: -8%;
+    top: 30%;
+    margin: 0 50px;
+}
+
+
+.navigation a {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+
+}
+
+.navigation a:first-child {
+    color: rgb(187, 65, 56)
+}
+
+.navigation a:hover {
+    color: rgb(187, 65, 56)
+}
+
+.topbar {
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid grey;
+}
+
+
+.topbar a {
+    position: absolute;
+    font-size: 3vh;
+    border-left: 1px solid grey;
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    line-height: 6vh;
+    border-right: 1px solid grey;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.topbar a+a {
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+}
+
+.topbar a:hover {
+    color: rgb(24, 119, 242);
+}
+
+.topbar a+a:hover {
+    color: #d6249f;
+}
+
+.article {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    bottom: -20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.article span {
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.gallery {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.pictures {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 32vh;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 64vh;
+    width: 100%;
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.pictures a img {
+    height: 32vh;
+    width: 32vh;
+    margin: 3px;
+}
+
+
+
+
+
+ h1{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+
+footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background-color:  rgb(43, 4, 0);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    
+    
+    
+}
+footer img{
+    height: 15vh;
+    width: 25vh;
+}
+
+footer div{
+    width: 33,3%;
+    margin: 40px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    text-align: center;
+}
+
+footer p{
+    font-family: "open Sans", sans-serif;
+    color: rgb(155, 165, 164);
+    font-size: 16px;
+    text-align: center;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+footer .info a{
+    color: rgb(187, 65, 56);
+    font-size: 25px;
+}
+
+footer .fb a{
+    color: white;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.fb a:hover {
+    color: rgb(24, 119, 242);
+}
+
+.fb a+a:hover {
+    color: #d6249f;
+}
+
+@media (min-width: 1025px){
+    .bars{
+        display: none;
+        opacity: 0;
+    }
+    .exit{
+        opacity: 0;
+        display: none;
+    }
+    
+    .mobilemenu{
+        display: none;
+    }
+    
+    .mobilemenu a:nth-child(1) {
+        display: none;
+    }
+    .mobilemenu a{
+        display: none;
+    }
+
+}
+
+@media (max-width: 1240px){
+    .navbar img {
+        left: -10%;
+        top: 40%;
+    }
+} 
+
+ @media (max-width: 1100px){
+    .navbar img {
+        height: 13vw;
+        width: 21vw;
+        left: -12%;
+        top: 50%;
+    }
+} 
+
+@media (max-width: 1024px) and (orientation: portrait){
+    .navigation {
+        display: none;
+    }
+
+    .navbar img {
+        height: 20vw;
+        width: 30vw;
+        left: -12%;
+        top: 40%;
+    }
+} 
+
+@media (max-width: 1366px) and (orientation: landscape){
+    /* .navigation {
+        display: none;
+    } */
+
+} 
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .navigation {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+    .gallery{
+        height: 110vh;
+    }
+}
+
+@media (max-width: 540px) and (orientation: portrait){
+    .article span {
+        font-size: 50px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    .gallery{
+        height: 120vh;
+    }
+
+} 
+
+@media (max-width: 720px) and (orientation: landscape){
+    .article span {
+        font-size: 50px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    .gallery{
+        height: 130vh;
+    }
+
+    .navbar img {
+        height: 16vw;
+        width: 26vw;
+        left: -12%;
+        top: 40%;
+    }
+
+} 
+
+@media (max-width: 375px) and (orientation: portrait){
+    .article span {
+        font-size: 40px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    .gallery{
+        height: 130vh;
+    }
+
+    .navbar img {
+        height: 28vw;
+        width: 40vw;
+        left: -20%;
+        top: 40%;
+    }
+
+    .mobilemenu a{
+        font-size: 0.7em;
+    }
+}
+
+    @media (max-width: 812px) and (orientation: landscape){
+    header{
+        height: 100vh;
+    }
+    .article span {
+        font-size: 35px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .gallery{
+        height: 130vh;
+    }
+
+    .navbar img {
+        height: 16vw;
+        width: 26vw;
+        left: -14%;
+        top: 40%;
+    }
+
+    .topbar a{
+        font-size: 15px;
+    }
+
+}  
+
+@media (max-width: 414px) and (orientation: portrait){
+   
+    .gallery{
+        height: 140vh;
+    }
+}
+
+@media (max-width: 667px) and (orientation: landscape){
+   
+   .gallery{
+       height: 150vh;
+   }
+}
+
+@media (max-width: 360px) and (orientation: portrait){
+   
+   .gallery{
+       height: 150vh;
+   }
+}
+
+@media (max-width: 640px) and (orientation: landscape){
+   
+   .gallery{
+       height: 160vh;
+   }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+
+
+            <div>
+                <i class="fas fa-bars bars"></i>
+            <i class="fas fa-times exit"></i>
+            <div class="mobilemenu">
+                <a class="start" href="index.html">Start</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+            </div>
+            <div class="topbar">
+               <a href="https://www.facebook.com/Pierogi.Lapanowskie"> <i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="navbar">
+                <img src="LOGOq1.png" alt="logo">
+            <div class="navigation">
+                <a class="start" href="index.html">Start</a>
+                <a href="menu.html">Menu</a>
+                <a href="#">Galeria</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+
+        <div class="article">
+            <span>Galeria</span>
+        </div>
+
+        </header>
+       
+
+       
+        <h1>Zobacz naszą galerię zdjęć</h1>
+
+        <div class="gallery">
+            <section class="pictures">
+                <a href="9.jpg" data-lightbox="www"><img src="9.jpg" alt="miniatura"></a>
+                <a href="2.jpg" data-lightbox="www"><img src="2.jpg" alt="miniatura"></a>
+                <a href="3.jpg" data-lightbox="www"><img src="3.jpg" alt="miniatura"></a>
+                <a href="5.jpg" data-lightbox="www"><img src="5.jpg" alt="miniatura"></a>
+                <a href="7.jpg" data-lightbox="www"><img src="7.jpg" alt="miniatura"></a>
+                <a href="8.jpg" data-lightbox="www"><img src="8.jpg" alt="miniatura"></a>
+                <a href="6.jpg" data-lightbox="www"><img src="6.jpg" alt="miniatura"></a>
+                <a href="10.jpg" data-lightbox="www"><img src="10.jpg" alt="miniatura"></a>
+                <a href="4.jpg" data-lightbox="www"><img src="4.jpg" alt="miniatura"></a>
+                <a href="1.jpg" data-lightbox="www"><img src="1.jpg" alt="miniatura"></a>
+            </section>
+
+        <footer>
+            <div class="logo">
+                <img src="LOGOq1.png" alt="logo">
+            </div>
+            <div class="info">
+                <p>Kobylec 189,
+                    32-740 Łapanów
+                </p>
+                <p>
+                    Telefon: 537 125 066
+                </p>
+                <a href="https://www.google.com/maps/place/Pierogi+Lapanowskie+-+Kobylec+189/@49.868796,20.296611,16z/data=!4m5!3m4!1s0x0:0xf0c82461d260dfa8!8m2!3d49.8687958!4d20.2966113?hl=pl">Mapa dojazdu</a>
+            </div>
+            <div class="fb">
+                <p>Obserwuj nas na:</p>
+                <a href="https://www.facebook.com/Pierogi.Lapanowskie"> <i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+      
+
+        </footer>
+        <script src="jquery-3.2.1.min.js"></script>
+        <script src="dist/js/lightbox.js"></script>
+        <script>
+            lightbox.option({
+             'albumLabel': "Zdjęcie %1 z %2"
+            })
+
+            const bars = document.querySelector('.bars');
+const exit = document.querySelector('.exit');
+const mobileMenu = document.querySelector('.mobilemenu');
+
+bars.addEventListener('click', () => {
+  mobileMenu.style.transform = 'translateX(0%)';
+  exit.style.opacity = '1';
+});
+
+exit.addEventListener('click', () => {
+  mobileMenu.style.transform = 'translateX(100%)';
+  exit.style.opacity = '0';
+});
+           </script>
+
+        </body>
+        </html>
